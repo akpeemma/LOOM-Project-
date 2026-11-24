@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="loom_a11y_description">LOOM reads the current screen to understand buttons and menus for visual guidance, and can tap highlighted elements only after your confirmation. Enable only if you want on-screen guidance.</string>
+</resources>

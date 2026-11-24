@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LOOM card: dark rounded surface with blue-violet glow edge -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- outer glow -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/loom_accent_glow" />
+            <corners android:radius="@dimen/loom_radius_card" />
+        </shape>
+    </item>
+    <!-- inner surface, inset to leave a glowing rim -->
+    <item android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/loom_surface" />
+            <stroke android:width="@dimen/loom_card_stroke" android:color="@color/loom_stroke_glow" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- LOOM permission set — trimmed 22 -> 12 per Phase 3 §4b. M0 skeleton: declarations only. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- Master §1 — QUERY_ALL_PACKAGES is declared AND granted for
+         sideloaded LOOM, but it is a Play-restricted permission: a future
+         Play-distributed build must not depend on it. The <queries> entry
+         below is the supported route and is sufficient for launcher
+         discovery on its own. -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <!-- Master §1 — UsageStats foreground fallback. Declaration only:
+         the user must grant Usage access in Settings → Apps → Special
+         access → Usage access; AppCatalogue reports Unavailable until
+         then, never a guessed foreground app. -->
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+
+    <!-- Master §1 — package visibility for the AppCatalogue: declaring
+         the launcher intent makes every launchable app visible to
+         PackageManager.queryIntentActivities, without relying on
+         QUERY_ALL_PACKAGES. Without this (and without that permission)
+         the query silently returns a filtered subset. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Dropped from the old APK (Phase 3 §4b): CALL_PHONE, SEND_SMS, READ_CONTACTS,
+         WRITE_SETTINGS, ACCESS_NOTIFICATION_POLICY, SET_ALARM, MANAGE_EXTERNAL_STORAGE,
+         READ/WRITE_EXTERNAL_STORAGE, device-admin, ML Kit face libs. -->
+
+    <application
+        android:name=".app.LoomApplication"
+        android:label="LOOM"
+        android:theme="@style/Theme.Loom">
+        <!-- M0: no activities/services yet. Declared in later milestones. -->
+        <activity
+            android:name=".app.MainActivity"
+            android:launchMode="singleTop"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Phase 4 — system-wide overlay host (character / orb / edge-light / pointer).
+             Foreground special-use; minimal silent notification (Android 8+ mandates it). -->
+        <service
+            android:name=".platform.services.LoomOverlayService"
+            android:exported="false"
+            android:foregroundServiceType="microphone|specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="System-wide floating assistant: character, orb, edge-light and pointer guidance over other apps." />
+        </service>
+
+        <!-- Phase 4 — accessibility service for screen awareness + pointer guidance.
+             Disabled by default; David enables it in Settings → Device Control. -->
+        <service
+            android:name=".platform.services.LoomAccessibilityService"
+            android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/loom_a11y_config" />
+        </service>
+        <!-- Phase 6 — AuthGate confirmation fallback receiver (arch §2.14).
+             Handles Approve/Deny on the fallback notification; exported=false.
+             Device-evidence fix (2026-11-05, item 10): APPROVE_ALWAYS is the
+             notification's "Always allow" action (approve + store the grant). -->
+        <receiver
+            android:name=".app.AuthActionReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.loom.assistant.auth.APPROVE" />
+                <action android:name="com.loom.assistant.auth.DENY" />
+                <action android:name="com.loom.assistant.auth.APPROVE_ALWAYS" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

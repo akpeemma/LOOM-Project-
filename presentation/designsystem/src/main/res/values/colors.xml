@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LOOM Design Lockdown v1.1 — design tokens. Dark theme only. -->
+<resources>
+    <!-- Backgrounds: deep charcoal / black -->
+    <color name="loom_background">#08080F</color>
+    <color name="loom_surface">#101019</color>
+    <color name="loom_surface_2">#171724</color>
+    <color name="loom_surface_3">#1F1F30</color>
+
+    <!-- Accents: glowing blue-violet -->
+    <color name="loom_accent">#7B61FF</color>
+    <color name="loom_accent_bright">#A78BFA</color>
+    <color name="loom_accent_soft">#4A3D99</color>
+    <color name="loom_accent_dim">#2A2358</color>
+    <color name="loom_accent_glow">#407B61FF</color>
+
+    <!-- Silver-white AI identity -->
+    <color name="loom_silver">#F2F2F7</color>
+    <color name="loom_silver_dark">#9A9AB0</color>
+
+    <!-- Text -->
+    <color name="loom_text_primary">#F4F4F9</color>
+    <color name="loom_text_secondary">#A9A9BE</color>
+    <color name="loom_text_muted">#6E6E84</color>
+
+    <!-- Strokes / dividers -->
+    <color name="loom_stroke">#26263A</color>
+    <color name="loom_stroke_glow">#557B61FF</color>
+
+    <!-- Status -->
+    <color name="loom_success">#34D399</color>
+    <color name="loom_warning">#FBBF24</color>
+    <color name="loom_error">#F87171</color>
+
+    <!-- Scrim -->
+    <color name="loom_scrim">#B3000000</color>
+</resources>

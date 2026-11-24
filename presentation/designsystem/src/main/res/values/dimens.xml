@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LOOM spacing / radius / type scale -->
+<resources>
+    <!-- Spacing -->
+    <dimen name="loom_space_2">2dp</dimen>
+    <dimen name="loom_space_4">4dp</dimen>
+    <dimen name="loom_space_8">8dp</dimen>
+    <dimen name="loom_space_12">12dp</dimen>
+    <dimen name="loom_space_16">16dp</dimen>
+    <dimen name="loom_space_20">20dp</dimen>
+    <dimen name="loom_space_24">24dp</dimen>
+    <dimen name="loom_space_32">32dp</dimen>
+
+    <!-- Corner radii -->
+    <dimen name="loom_radius_card">18dp</dimen>
+    <dimen name="loom_radius_sheet">24dp</dimen>
+    <dimen name="loom_radius_button">14dp</dimen>
+    <dimen name="loom_radius_pill">999dp</dimen>
+    <dimen name="loom_radius_small">10dp</dimen>
+
+    <!-- Type scale -->
+    <dimen name="loom_text_display">30sp</dimen>
+    <dimen name="loom_text_title">22sp</dimen>
+    <dimen name="loom_text_headline">18sp</dimen>
+    <dimen name="loom_text_body">15sp</dimen>
+    <dimen name="loom_text_label">13sp</dimen>
+    <dimen name="loom_text_caption">12sp</dimen>
+    <dimen name="loom_text_pill">13sp</dimen>
+
+    <!-- Component sizes -->
+    <dimen name="loom_bottom_nav_height">72dp</dimen>
+    <dimen name="loom_bottom_nav_icon">24dp</dimen>
+    <dimen name="loom_header_pill_height">40dp</dimen>
+    <dimen name="loom_card_stroke">1dp</dimen>
+    <dimen name="loom_logo_size">56dp</dimen>
+</resources>

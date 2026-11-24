@@ -1,0 +1,12 @@
+# Gradle / Android build outputs
+build/
+build-manual/
+*.apk
+*.idsig
+*.dex
+*.jar
+*.log
+local.properties
+.idea/
+*.iml
+.DS_Store

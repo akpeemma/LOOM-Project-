@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LOOM bottom navigation — 5 locked destinations, Design Lockdown v1.1 -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/ic_nav_home" />
+    <item
+        android:id="@+id/nav_tasks"
+        android:title="Tasks"
+        android:icon="@drawable/ic_nav_tasks" />
+    <item
+        android:id="@+id/nav_skills"
+        android:title="Skills"
+        android:icon="@drawable/ic_nav_skills" />
+    <item
+        android:id="@+id/nav_memory"
+        android:title="Memory"
+        android:icon="@drawable/ic_nav_memory" />
+    <item
+        android:id="@+id/nav_more"
+        android:title="More"
+        android:icon="@drawable/ic_nav_more" />
+</menu>

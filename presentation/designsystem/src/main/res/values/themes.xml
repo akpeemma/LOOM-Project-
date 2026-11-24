@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LOOM theme — dark only, per Design Lockdown v1.1 -->
+<resources>
+    <style name="Theme.Loom" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/loom_background</item>
+        <item name="android:colorBackground">@color/loom_background</item>
+        <item name="android:textColorPrimary">@color/loom_text_primary</item>
+        <item name="android:textColorSecondary">@color/loom_text_secondary</item>
+        <item name="android:textColorHint">@color/loom_text_muted</item>
+        <item name="android:colorPrimary">@color/loom_accent</item>
+        <item name="android:colorPrimaryDark">@color/loom_background</item>
+        <item name="android:colorAccent">@color/loom_accent_bright</item>
+        <item name="android:statusBarColor">@color/loom_background</item>
+        <item name="android:navigationBarColor">@color/loom_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Dark dialog theme — LOOM-owned so popups stay readable on every
+         device skin (some OEM skins restyle the stock Material dialog light,
+         which made LOOM's light text invisible). -->
+    <style name="Loom.Dialog" parent="@android:style/Theme.Material.Dialog">
+        <item name="android:windowBackground">@color/loom_surface</item>
+        <item name="android:colorBackground">@color/loom_surface</item>
+        <item name="android:textColorPrimary">@color/loom_text_primary</item>
+        <item name="android:textColorSecondary">@color/loom_text_secondary</item>
+        <item name="android:textColorHint">@color/loom_text_muted</item>
+        <item name="android:colorAccent">@color/loom_accent_bright</item>
+        <item name="android:buttonBarButtonStyle">@style/Loom.Dialog.Button</item>
+    </style>
+
+    <style name="Loom.Dialog.Button" parent="@android:style/Widget.Material.Button.Borderless">
+        <item name="android:textColor">@color/loom_accent_bright</item>
+    </style>
+
+    <!-- Text appearances -->
+    <style name="LoomText.Display" parent="">
+        <item name="android:textSize">@dimen/loom_text_display</item>
+        <item name="android:textColor">@color/loom_text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="LoomText.Title" parent="">
+        <item name="android:textSize">@dimen/loom_text_title</item>
+        <item name="android:textColor">@color/loom_text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="LoomText.Headline" parent="">
+        <item name="android:textSize">@dimen/loom_text_headline</item>
+        <item name="android:textColor">@color/loom_text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="LoomText.Body" parent="">
+        <item name="android:textSize">@dimen/loom_text_body</item>
+        <item name="android:textColor">@color/loom_text_secondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="LoomText.Label" parent="">
+        <item name="android:textSize">@dimen/loom_text_label</item>
+        <item name="android:textColor">@color/loom_text_secondary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.08</item>
+    </style>
+    <style name="LoomText.Caption" parent="">
+        <item name="android:textSize">@dimen/loom_text_caption</item>
+        <item name="android:textColor">@color/loom_text_muted</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!-- Components -->
+    <style name="Loom.HeaderPill" parent="">
+        <item name="android:background">@drawable/loom_header_pill</item>
+        <item name="android:textSize">@dimen/loom_text_pill</item>
+        <item name="android:textColor">@color/loom_silver</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">@dimen/loom_space_20</item>
+        <item name="android:paddingEnd">@dimen/loom_space_20</item>
+        <item name="android:minHeight">@dimen/loom_header_pill_height</item>
+    </style>
+
+    <style name="Loom.Button.Primary" parent="">
+        <item name="android:background">@drawable/loom_button_primary</item>
+        <item name="android:textSize">@dimen/loom_text_body</item>
+        <item name="android:textColor">@color/loom_silver</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">@dimen/loom_space_24</item>
+        <item name="android:paddingEnd">@dimen/loom_space_24</item>
+        <item name="android:minHeight">52dp</item>
+    </style>
+
+    <style name="Loom.BottomNav" parent="">
+        <item name="android:background">@color/loom_surface</item>
+    </style>
+    <style name="Loom.BottomNav.Label" parent="">
+        <item name="android:textSize">@dimen/loom_text_caption</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

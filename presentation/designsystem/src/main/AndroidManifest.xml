@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LOOM design system library — theme, components, navigation scaffold. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.loom.assistant.presentation.designsystem">
+</manifest>

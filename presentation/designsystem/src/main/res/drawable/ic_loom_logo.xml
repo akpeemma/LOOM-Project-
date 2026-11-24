@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LOOM infinity-loop mark — drawn vector, Design Lockdown v1.1 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+
+    <!-- soft halo -->
+    <path
+        android:pathData="M32,32 C32,22 22,16 14,20 C6,24 6,40 14,44 C22,48 32,42 32,32 C32,22 42,16 50,20 C58,24 58,40 50,44 C42,48 32,42 32,32 Z"
+        android:strokeColor="#307B61FF"
+        android:strokeWidth="9"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <!-- main loop -->
+    <path
+        android:pathData="M32,32 C32,22 22,16 14,20 C6,24 6,40 14,44 C22,48 32,42 32,32 C32,22 42,16 50,20 C58,24 58,40 50,44 C42,48 32,42 32,32 Z"
+        android:strokeColor="#A78BFA"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+</vector>

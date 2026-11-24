@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="loom_bottom_nav_tag_icon" type="id" />
+    <item name="loom_bottom_nav_tag_label" type="id" />
+    <item name="loom_main_content" type="id" />
+    <item name="loom_main_bottom_nav" type="id" />
+    <item name="loom_ui_inner_tag" type="id" />
+</resources>
